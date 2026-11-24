@@ -3,7 +3,9 @@
 This is a mockup of how packets transfer data across the internet, you enter some text and it will "send" it too the IP adress set.
 
 Packet Header: **[to=10.0.0.5 seq=1]**
+
 Packet Payload: **,message to t,**
+
 Packet trailer: **[2523470218]**
 
 Resulting in the full Packet looking as such:
