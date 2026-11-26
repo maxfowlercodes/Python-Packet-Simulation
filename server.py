@@ -1,11 +1,7 @@
-import http.server
-import socketserver
-PORT = 8000
-Handler = http.server.SimpleHTTPRequestHandler
+from fastapi import FastAPI
 
-def run_server():
-    with socketserver.TCPServer(("", PORT), Handler) as httpd:
-        print("serving at port", PORT)
-        httpd.serve_forever()
+app = FastAPI()
 
-run_server()
+@app.get("/get-message")
+async def read_root():
+    return {"Message": "Congrats this is your first API"}
